@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard ITB - Institut Tecnològic de Barcelona</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- ABANS (text simulat) -->
+            <div class="logo-itb">ITB</div>
+            <!-- DESPRÉS (imatge real) -->
+            <!-- <img src="images/logo-itb.png" alt="ITB Logo" class="logo-itb-img"> -->
+        </div>
+        <h1 class="main-title">Institut Tecnològic de Barcelona</h1>
+        <p class="subtitle">Dashboard de Seguiment</p>
+    </header>
+
+    <main class="container">
+        <!-- Secció Compte Enrere -->
+        <section class="events-section">
+            <h2 class="section-title">📅 Esdeveniments</h2>
+
+            <div class="cards-grid">
+                <!-- Nadal -->
+                <div class="card">
+                    <canvas id="christmasCanvas" width="200" height="200"></canvas>
+                    <h3 class="card-title">Dies fins Nadal</h3>
+                    <p class="card-date" id="christmasDate"></p>
+                    <p class="card-countdown" id="christmasDays"></p>
+                </div>
+
+                <!-- Sant Joan -->
+                <div class="card">
+                    <canvas id="santjoanCanvas" width="200" height="200"></canvas>
+                    <h3 class="card-title">Dies fins Sant Joan</h3>
+                    <p class="card-date" id="santjoanDate"></p>
+                    <p class="card-countdown" id="santjoanDays"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secció Meteorologia -->
+        <section class="weather-section">
+            <h2 class="section-title">🌤️ Meteorologia Barcelona</h2>
+
+            <div id="weatherLoading" class="loading">
+                <p>Carregant dades meteorològiques...</p>
+            </div>
+
+            <div id="weatherError" class="error hidden">
+                <p>Error carregant dades meteorològiques</p>
+            </div>
+
+            <div id="weatherContent" class="cards-grid hidden">
+                <!-- Temperatura Actual -->
+                <div class="card">
+                    <canvas id="tempCurrentCanvas" width="200" height="200"></canvas>
+                    <h3 class="card-title">Temperatura Actual</h3>
+                    <p class="card-info">Ara mateix</p>
+                    <p class="card-source">Font: Open-Meteo</p>
+                </div>
+
+                <!-- Temperatura Mínima -->
+                <div class="card">
+                    <canvas id="tempMinCanvas" width="200" height="200"></canvas>
+                    <h3 class="card-title">Temperatura Mínima</h3>
+                    <p class="card-info">Avui</p>
+                    <p class="card-source">Previsió diària</p>
+                </div>
+
+                <!-- Temperatura Màxima -->
+                <div class="card">
+                    <canvas id="tempMaxCanvas" width="200" height="200"></canvas>
+                    <h3 class="card-title">Temperatura Màxima</h3>
+                    <p class="card-info">Avui</p>
+                    <p class="card-source">Previsió diària</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p id="currentTime"></p>
+        <p class="footer-source">Dades meteorològiques proporcionades per Open-Meteo API</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/countdown.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
