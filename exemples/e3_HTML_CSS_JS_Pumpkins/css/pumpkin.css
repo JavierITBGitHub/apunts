@@ -1,0 +1,22 @@
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+}
+h1{
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    }
+#glow,
+#shadow {
+	filter: blur(20px);
+}
+
+polygon,
+rect,
+circle {
+	opacity: 0;
+}
