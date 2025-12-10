@@ -1,0 +1,319 @@
+/* ------------------------------
+   Dashboard corporatiu ITB
+--------------------------------*/
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0a2540, #020d1f);
+    color: #e6f1ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#logoITB {
+    height: 60px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Dashboard */
+#dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+/* Targetes corporatives */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px 25px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: glow 3s infinite alternate;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+/* Rellotge i data */
+#rellotge {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #00e5ff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+    display: block;
+}
+
+#data {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00e5ff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+    margin-bottom: 10px; /* Afegim espai abans de la temperatura */
+}
+
+/* NOU ESTIL PER A LA TEMPERATURA */
+#temperatura {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #7df9ff; /* Un color similar però menys dominant */
+}
+
+
+/* Comptadors: Estils */
+#comptadorNadal {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.5);
+}
+
+#comptadorSantJoan {
+    color: #ffd93d;
+    border-color: rgba(255, 217, 61, 0.5);
+}
+
+/* Estil general per al paràgraf contenidor dins la targeta */
+#comptadorNadal p, #comptadorSantJoan p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+/* Estil per al nombre de dies (l'etiqueta <strong>) */
+#comptadorNadal strong, #comptadorSantJoan strong {
+    font-size: 1.8rem;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Enllaços */
+a {
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #7df9ff;
+}
+
+/* Llista d’index (Navegació) */
+nav {
+    margin: 30px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+nav h3 {
+    color: #7df9ff;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+ul li a {
+    display: block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+ul li a:hover {
+    background: rgba(0, 229, 255, 0.1);
+}
+
+/* Temporitzador estil corporatiu */
+#temporitzadorCard {
+    background-color: #1b1f2a;
+    color: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+#temporitzadorCard h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #00e5ff;
+}
+
+#temporitzadorDisplay {
+    font-family: 'Consolas', monospace;
+    font-size: 2.5em;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    color: #4deeea;
+    transition: color 0.5s ease;
+}
+
+#temporitzadorInputs {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#temporitzadorControls input {
+    width: 50px;
+    padding: 5px;
+    margin: 0 3px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2e3d;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#temporitzadorControls input:disabled {
+    background-color: #1a1e2a;
+    color: #555;
+    cursor: not-allowed;
+}
+
+#temporitzadorControls button {
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4deeea;
+    color: #1b1f2a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#temporitzadorControls button:hover:enabled {
+    background-color: #00ffd6;
+}
+
+#temporitzadorControls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Animacions del Temporitzador */
+@keyframes glow {
+    0% { box-shadow: 0 0 15px rgba(0,229,255,0.1); }
+    50% { box-shadow: 0 0 25px rgba(0,229,255,0.2); }
+    100% { box-shadow: 0 0 15px rgba(0,229,255,0.1); }
+}
+
+@keyframes timerGlow {
+    0% { text-shadow: 0 0 5px #4deeea, 0 0 10px #4deeea, 0 0 15px #4deeea; }
+    50% { text-shadow: 0 0 10px #00ffd6, 0 0 20px #00ffd6, 0 0 30px #00ffd6; }
+    100% { text-shadow: 0 0 5px #4deeea, 0 0 10px #4deeea, 0 0 15px #4deeea; }
+}
+
+#temporitzadorDisplay.running {
+    animation: timerGlow 2s infinite alternate;
+}
+
+/* Parpelleig vermell quan acaba el temps */
+@keyframes blinkRed {
+    0%, 50%, 100% { color: red; }
+    25%, 75% { background-color: #1b1f2a; }
+}
+
+#temporitzadorDisplay.finished {
+    animation: blinkRed 1s infinite;
+}
+
+
+/* ------------------------------
+   Responsive (Mòbils)
+--------------------------------*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #logoITB {
+        height: 50px;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+    #dashboard {
+        flex-direction: column;
+        padding: 0 5%;
+        gap: 15px;
+    }
+    .card {
+        min-width: 90%;
+    }
+
+    #rellotge {
+        font-size: 2.5rem;
+    }
+
+    #data {
+        font-size: 1.2rem;
+    }
+
+    #temporitzadorDisplay {
+        font-size: 2.0em;
+    }
+
+    #temporitzadorControls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #temporitzadorInputs {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    #temporitzadorInputs input {
+        width: 40px;
+        margin: 0;
+    }
+
+    #temporitzadorControls button {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav {
+        margin: 20px auto;
+        max-width: 300px;
+    }
+}

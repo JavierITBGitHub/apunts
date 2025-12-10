@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAB Dashboard - ITB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo_itb.png" alt="Logotip de l'ITB" id="logoITB">
+        <h1>JAB Dashboard</h1>
+    </header>
+
+    <main id="dashboard">
+
+        <section class="card" id="rellotgeCard">
+            <time id="rellotge">00:00:00</time>
+            <div id="data">--/--/----</div>
+            <div id="temperatura">-- ºC | --</div> </section>
+
+        <section class="card" id="temporitzadorCard">
+            <h2>Temporitzador</h2>
+            <div id="temporitzadorDisplay" role="timer" aria-live="polite">00:00:00</div>
+            <div id="temporitzadorControls">
+                <div id="temporitzadorInputs">
+                    <input type="number" id="horesInput" placeholder="hh" min="0" aria-label="Hores"> :
+                    <input type="number" id="minutsInput" placeholder="mm" min="0" max="59" aria-label="Minuts"> :
+                    <input type="number" id="segonsInput" placeholder="ss" min="0" max="59" aria-label="Segons">
+                </div>
+                <button id="startBtn">Inicia</button>
+                <button id="pauseBtn">Pausa</button>
+                <button id="resetBtn">Reinicia</button>
+            </div>
+        </section>
+
+        <section class="card" id="comptadorNadal">
+            </section>
+
+        <section class="card" id="comptadorSantJoan">
+            </section>
+
+    </main>
+
+    <nav>
+        <h3>Altres exemples</h3>
+        <ul>
+            <li><a href="../exemples/xMas/index.html">Exemples xMas</a></li>
+            <li><a href="../exemples/e1_Bad_Handwriting/index.html">Exemples Handwriting</a></li>
+            <li><a href="../exemples/e1.5_Rellotge/index.html">Exemples Rellotge</a></li>
+            <li><a href="../exemples/e3_HTML_CSS_JS_Pumpkins/index.html">Exemples Pumpkins</a></li>
+            <li><a href="../exemples/e4_CurriculumVitae/index.html">Exemples Curriculum Vitae</a></li>
+            <li><a href="../exemples/e4_PhotoTemplate/index.html">Exemples Photo Template</a></li>
+            <li><a href="../itb-dashboard/index.html">ITB Dashboard</a></li>
+        </ul>
+    </nav>
+
+
+    <script src="js/rellotge.js"></script>
+    <script src="js/temporitzador.js"></script>
+
+</body>
+</html>
