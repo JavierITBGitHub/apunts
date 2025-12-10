@@ -24,7 +24,7 @@ function actualitzaComptadors(ara) {
     if (ara > nadal) nadal.setFullYear(nadal.getFullYear() + 1);
     const diesNadal = Math.ceil((nadal - ara)/(1000*60*60*24));
     document.getElementById("comptadorNadal").textContent =
-        `${diesNadal} dies fins a Nadal 🎄`;
+        ` ${diesNadal} dies fins a Nadal 🎄`;
 
     const santJoan = new Date(ara.getFullYear(), 5, 24);
     if (ara > santJoan) santJoan.setFullYear(santJoan.getFullYear() + 1);
