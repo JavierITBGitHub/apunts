@@ -131,3 +131,88 @@ ul li a {
 ul li a:hover {
     background: rgba(0, 229, 255, 0.1); /* efecte subtil hover */
 }
+
+/* Temporitzador estil corporatiu */
+#temporitzadorCard {
+    background-color: #1b1f2a; /* fons fosc corporatiu */
+    color: #e0e0e0;           /* text clar */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+#temporitzadorCard:hover {
+    transform: translateY(-3px);
+}
+
+#temporitzadorDisplay {
+    font-family: 'Consolas', monospace;
+    font-size: 2.5em;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    color: #4deeea; /* color neon subtil */
+    transition: color 0.5s ease;
+}
+
+#temporitzadorDisplay.running {
+    color: #00ffd6;
+}
+
+#temporitzadorControls input {
+    width: 50px;
+    padding: 5px;
+    margin: 0 3px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2e3d;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#temporitzadorControls button {
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4deeea;
+    color: #1b1f2a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#temporitzadorControls button:hover {
+    background-color: #00ffd6;
+}
+
+/* Parpelleig vermell quan acaba el temps */
+@keyframes blinkRed {
+    0%, 50%, 100% { color: red; }
+    25%, 75% { color: #1b1f2a; } /* color fons */
+}
+
+#temporitzadorDisplay.finished {
+    animation: blinkRed 1s infinite;
+}
+
+/* Brillantor suau mentre compta */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #4deeea, 0 0 10px #4deeea, 0 0 15px #4deeea; }
+    50% { text-shadow: 0 0 10px #00ffd6, 0 0 20px #00ffd6, 0 0 30px #00ffd6; }
+    100% { text-shadow: 0 0 5px #4deeea, 0 0 10px #4deeea, 0 0 15px #4deeea; }
+}
+
+#temporitzadorDisplay.running {
+    animation: glow 2s infinite alternate;
+}
+
+/* Pampallugues vermell quan el temps arriba a 0 */
+@keyframes blinkRed {
+    0%, 50%, 100% { color: red; }
+    25%, 75% { color: #1b1f2a; } /* color fons */
+}
+
+#temporitzadorDisplay.finished {
+    animation: blinkRed 1s infinite;
+}

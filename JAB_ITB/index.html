@@ -22,6 +22,20 @@
             <div id="data">--/--/----</div>
         </div>
 
+        <!-- Temporitzador editable -->
+        <div class="card" id="temporitzadorCard">
+            <h3>Temporitzador</h3>
+            <div id="temporitzadorDisplay">00:00:00</div>
+            <div id="temporitzadorControls">
+                <input type="number" id="horesInput" placeholder="hh" min="0"> :
+                <input type="number" id="minutsInput" placeholder="mm" min="0" max="59"> :
+                <input type="number" id="segonsInput" placeholder="ss" min="0" max="59">
+                <button id="startBtn">Inicia</button>
+                <button id="pauseBtn">Pausa</button>
+                <button id="resetBtn">Reinicia</button>
+            </div>
+        </div>
+
         <!-- Comptador Nadal -->
         <div class="card" id="comptadorNadal">
             dies fins a Nadal 🎄
@@ -35,19 +49,19 @@
     </div>
     
 <ul>
-    <li><a href="./web/css/index.html">CSS</a></li>
-    <li><a href="./web/js/index.html">JavaScript</a></li>
-    <li><a href="exemples/xMas/index.html">Exemples xMas</a></li>
-    <li><a href="exemples/e1_Bad_Handwriting/index.html">Exemples Handwriting</a></li>
-    <li><a href="exemples/e1.5_Rellotge/index.html">Exemples Rellotge</a></li>
-    <li><a href="exemples/e3_HTML_CSS_JS_Pumpkins/index.html">Exemples Pumpkins</a></li>
-    <li><a href="exemples/e4_CurriculumVitae/index.html">Exemples Curriculum Vitae</a></li>
-    <li><a href="exemples/e4_PhotoTemplate/index.html">Exemples Photo Template</a></li>
-    <li><a href="./itb-dashboard/index.html">ITB Dashboard</a></li>
+    <li><a href="../exemples/xMas/index.html">Exemples xMas</a></li>
+    <li><a href="../exemples/e1_Bad_Handwriting/index.html">Exemples Handwriting</a></li>
+    <li><a href="../exemples/e1.5_Rellotge/index.html">Exemples Rellotge</a></li>
+    <li><a href="../exemples/e3_HTML_CSS_JS_Pumpkins/index.html">Exemples Pumpkins</a></li>
+    <li><a href="../exemples/e4_CurriculumVitae/index.html">Exemples Curriculum Vitae</a></li>
+    <li><a href="../exemples/e4_PhotoTemplate/index.html">Exemples Photo Template</a></li>
+    <li><a href="../itb-dashboard/index.html">ITB Dashboard</a></li>
 </ul>
 
 
 
     <script src="js/rellotge.js"></script>
+    <script src="js/temporitzador.js"></script>
+
 </body>
 </html>
