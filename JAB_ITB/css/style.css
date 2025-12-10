@@ -63,10 +63,19 @@ h1 {
     text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
 }
 
+/*
 #data {
     margin-top: 6px;
     font-size: 1.1rem;
     color: #a9c2d6;
+}
+*/
+#data {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00e5ff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+    /*animation: glow 2s infinite alternate;*/
 }
 
 /* Comptadors */
