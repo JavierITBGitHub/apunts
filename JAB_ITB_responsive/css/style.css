@@ -1,0 +1,151 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #12131a;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Dashboard */
+#dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cards corporatives */
+.card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 200px;
+    background-color: #1b1f2a;
+    color: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Temporitzador */
+#temporitzadorDisplay {
+    font-family: 'Consolas', monospace;
+    font-size: 2.5em;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    color: #4deeea;
+}
+
+#temporitzadorControls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#temporitzadorControls input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2e3d;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#temporitzadorControls button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4deeea;
+    color: #1b1f2a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#temporitzadorControls button:hover {
+    background-color: #00ffd6;
+}
+
+/* Panpallugues vermell quan temps = 0 */
+@keyframes blinkRed {
+    0%, 50%, 100% { color: red; }
+    25%, 75% { color: #1b1f2a; }
+}
+
+#temporitzadorDisplay.finished {
+    animation: blinkRed 1s infinite;
+}
+
+/* Enllaços */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+ul li a {
+    color: #4deeea;
+    text-decoration: none;
+}
+
+/* Responsivitat */
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 90%;
+        padding: 15px;
+    }
+
+ #temporitzadorInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* alineació vertical centrada */
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#temporitzadorInputs input {
+    width: 40px;           /* més petit */
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2e3d;
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 0.9em;     /* lleugerament més petit */
+}
+
+
+#temporitzadorControls {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+
+    header img {
+        max-width: 80px;
+    }
+}
