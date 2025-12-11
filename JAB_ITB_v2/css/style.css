@@ -253,6 +253,21 @@ ul li a:hover {
     animation: blinkRed 1s infinite;
 }
 
+/* Footer */
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: #666;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-source {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
 
 /* ------------------------------
    Responsive (Mòbils)
@@ -261,6 +276,10 @@ ul li a:hover {
     header {
         flex-direction: column;
         text-align: center;
+    }
+    .footer-source {
+        font-size: 0.6rem;
+        opacity: 0.75;
     }
     #logoITB {
         height: 50px;
