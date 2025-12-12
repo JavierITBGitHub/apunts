@@ -4,7 +4,7 @@ Un tauler de control (Dashboard) senzill creat amb HTML, CSS (Styling Corporatiu
 
 ## ✨ Característiques
 
-* **Rellotge Digital:** Mostra l'hora actual en format 12 hores (AM/PM).
+* **Rellotge Digital:** Mostra l'hora actual en format 24 hores.
 * **Data Actual:** Mostra la data completa en català (Dia de la setmana, Dia, Mes, Any).
 * **Temporitzador Personalitzable:**
     * Permet introduir Hores, Minuts i Segons.
@@ -20,3 +20,5 @@ Un tauler de control (Dashboard) senzill creat amb HTML, CSS (Styling Corporatiu
 ## 🚀 Estructura del Projecte
 
 El projecte es divideix en fitxers ben estructurats:
+
+Dissenyat per JABITXU cuinat amb ChatGPT i Gemini 
