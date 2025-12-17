@@ -1,5 +1,5 @@
 ## Don't worry be Javi 👋
-![Javi](https://github.com/JavierITBGitHub/JavierITBGitHub/blob/main/octoCatDive.jpeg) 
+![Javi](octoCatDive.jpeg) 
 
 - 🌱 I’m currently learning ... all
   
